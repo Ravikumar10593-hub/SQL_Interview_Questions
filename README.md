@@ -11,7 +11,8 @@ The format would be:
 - Solution
 
 
-Problem Statement 1:
+### Problem Statement 1:
+
 Table: customer_orders
 +-------------+---------+
 | Column Name | Type    |

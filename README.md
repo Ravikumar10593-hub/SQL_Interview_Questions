@@ -1,17 +1,18 @@
-# SQL_Interview_Questions
+# SQL_Interview_Questions🤔
 In this post we are going to discuss the SQL interview questions asked to me by a Startup for a data science role.
 
 The format would be:
-## Problem Statement 1
-- Approach
-- Solution
 
-  ## Problem Statement 2
-- Approach
-- Solution
+Problem Statement 1
+- Approach👩‍🎓
+- Solution📖
+
+Problem Statement 2
+- Approach👩‍🎓
+- Solution📖
 
 
-### Problem Statement 1:
+## Problem Statement 1:
 
 Table: customer_orders
 ```
@@ -30,7 +31,7 @@ Table: customer_orders
 - `order_date`: A date field indicating the date when the order was placed.
 - `order_amount`: An integer representing the amount of the order.
 
-#### Question: 
+### Question❓: 
 Write a SQL code that should contain the order_date, the count of new customers on that date (customers who placed their first order on that date), and the count of repeated customers (customers who placed more than one order on that date)
 ``````
 Example:
@@ -61,7 +62,7 @@ Explanation:
 For '2022-01-01' all of them are new customers i.e, new_customer = 3 and repeated_customer = 0.
 Similarly for '2022-01-02' we have 400 and 500 as new_cutomer and 100 as repeated_customer.
 ``````
-#### Create Table Schema
+### Create Table Schema📑
 ```
 -- Create table Query
 create table customer_orders (
@@ -77,16 +78,17 @@ insert into customer_orders values(1,100,cast('2022-01-01' as date),2000),(2,200
 ,(7,100,cast('2022-01-03' as date),3000),(8,400,cast('2022-01-03' as date),1000),(9,600,cast('2022-01-03' as date),3000)
 
 **NOTE**: To run the code with me copy and paste the Create & Insert query to this website.
-``````
+```
 
-#### Approach
+### Approach👩‍🎓
 
 Section 1: Here we are creating a rank based on Customer_id and ordering by order_date, so that we can get the customer_id which is repeated more than 1 time.
 
 Section 2: Here we are segregating the customers with rank 1 as new_customer and Rank greater than 1 as repeated_customer & grouping and ordering it on order_date
 
+### Solution📖
+
 ``````
--- Solution
 with cte1 as(
 select *, 
 row_number() over(partition by customer_id order by order_date) as rn
@@ -100,7 +102,7 @@ order by order_date;
 ``````
 
 
-### Problem Statement 2:
+## Problem Statement 2:
 
 ``````
 Table: fruits_table
@@ -117,7 +119,7 @@ Table: fruits_table
 - `fruits` (Type: Varchar): Contains the names or types of fruits sold.
 - `sold_num` (Type: Int): Represents the quantity or number of fruits sold in each transaction.
 
-#### Question: 
+### Question❓: 
 Given a table of sales transactions with information about the date of the sale, the type of fruit (e.g., apples or oranges), and the quantity sold, how can we calculate the daily difference in the number of apples/oranges sold?
 ``````
 Example:
@@ -149,7 +151,7 @@ For '2020-05-01' apples = 10 and oranges are 8 so 10-8 = 2
 similary '2020-05-02' apples = 15 and oranges are 15 so 15-15=0
 ``````
 
-#### Create Table Schema
+### Create Table Schema📑
 ``````
 -- Create table Query
 CREATE TABLE fruits_table(
@@ -171,14 +173,15 @@ INSERT INTO fruits_table(sales_date, fruits, sold_num) VALUES
 NOTE: To run the code with me copy and paste the Create & Insert query to this website.
 ``````
 
-#### Solution
+### Approach👩‍🎓
 Section 1: Here we have only filtered for apples
 Section 2: Here we have only filtered for oranges
 Section 3: Merging the Section 1 and Section 2
 Section 4: Subtract the apple_sold and orange_sold from merged cte
 
+### Solution📖
+
 ``````
--- Solution
 with apple as(
 select * from fruits_table where fruits = 'apples'),
 

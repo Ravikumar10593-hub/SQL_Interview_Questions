@@ -1,15 +1,17 @@
 # SQL_Interview_Questions🤔
 In this post we are going to discuss the SQL interview questions asked to me by a Startup for a data science role.
 
-The format would be:
-
-Problem Statement 1
-- Approach👩‍🎓
-- Solution📖
-
-Problem Statement 2
-- Approach👩‍🎓
-- Solution📖
+- [SQL\_Interview\_Questions🤔](#sql_interview_questions)
+  - [Problem Statement 1:](#problem-statement-1)
+    - [Question❓:](#question)
+    - [Create Table Schema📑](#create-tableschema)
+    - [Approach👩‍🎓](#approach)
+    - [Solution📖](#solution)
+  - [Problem Statement 2:](#problem-statement-2)
+    - [Question❓:](#question-1)
+    - [Create Table Schema📑](#create-tableschema-1)
+    - [Approach👩‍🎓](#approach-1)
+    - [Solution📖](#solution-1)
 
 
 ## Problem Statement 1:

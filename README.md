@@ -1,6 +1,8 @@
 # SQL_Interview_Questions🤔
 In this post we are going to discuss the SQL interview questions asked to me by a Startup for a data science role.
 
+![](https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif)
+
 - [SQL\_Interview\_Questions🤔](#sql_interview_questions)
   - [Problem Statement 1:](#problem-statement-1)
     - [Question❓:](#question)
